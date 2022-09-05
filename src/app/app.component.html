@@ -1,0 +1,31 @@
+<div class="container">
+  <span class="label">Formula</span>
+
+  <div class="formula-container" contenteditable="false">
+    <span class="equal" contenteditable="false">=</span>
+
+    <!-- acts like text input -->
+    <div
+      class="formula-content"
+      contenteditable="true"
+      (formulaItemClicked)="onFormulaItemClicked($event)"
+      (fieldOrAttributeChanged)="fun($event)"
+      id="formulaInput"
+      tabindex="-1"
+    >
+      <!-- TODO -->
+    </div>
+
+    <div mat-dialog-actions class="modal-footer px-0 actions">
+      <button class="btn btn-primary btn-sm" (click)="onInsertField()">
+        + Insert Field
+      </button>
+      <button
+        class="btn btn-outline-secondary btn-sm"
+        (click)="onDeleteFormula()"
+      >
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
